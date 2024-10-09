@@ -1,0 +1,16 @@
+class Funcionario:
+    def __init__(self, nome, dias_trabalhados):
+        self.nome = nome
+        self.dias_trabalhados = dias_trabalhados
+        self.dias_ferias = self.calcular_ferias()
+
+    def calcular_ferias(self):
+        return self.dias_trabalhados // 12 * 30
+
+if __name__ == "__main__":
+    funcionarios = []
+    
+    while True:
+        nome = input("Digite o nome do funcionário: ")
+        dias_trabalhados = int(input("Digite os dias trabalhados: "))
+       
